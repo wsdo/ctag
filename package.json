@@ -1,0 +1,16 @@
+{
+  "name": "easy-tag",
+  "version": "1.0.0",
+  "description": "easy auto git tag",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "inquirer": "^6.3.1",
+    "semver": "^6.1.1"
+  }
+}
