@@ -11,7 +11,19 @@
 ## Install
 
 ```sh
-npm install
+npm install 
+```
+## config
+```
+package json script add 
+
+"tag": "node node_modules/easy-tag",
+
+```
+
+## run 
+```
+npm run tag
 ```
 
 ## Run tests
