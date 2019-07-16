@@ -1,6 +1,6 @@
 {
   "name": "easy-tag",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "easy auto git tag",
   "main": "index.js",
   "scripts": {
