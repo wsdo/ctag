@@ -4,6 +4,7 @@
   "description": "easy auto git tag",
   "main": "index.js",
   "scripts": {
+    "tag": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

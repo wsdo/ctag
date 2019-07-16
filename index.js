@@ -2,7 +2,19 @@ const semver = require('semver')
 const inquirer = require('inquirer')
 const { execSync } = require('child_process')
 // const curVersion = require('../package.json').version // get package version
-const curVersion = execSync(`git describe --abbrev=0 --tags`, { encoding: 'utf8' }).trim()
+let curVersion = '1.0.0'
+
+const tagInit = () => {
+  let msg = 'varsion init'
+  execSync(`git tag -a 'v${curVersion}' -m 'curVersion v${curVersion} : ${msg}'`)
+  execSync(`git push --tags`)
+  curVersion = execSync(`git describe --abbrev=0 --tags`, { encoding: 'utf8' }).trim()
+}
+try {
+  curVersion = execSync(`git describe --abbrev=0 --tags`, { encoding: 'utf8' }).trim()
+} catch (error) {
+  tagInit()
+}
 
 const release = async () => {
   console.log(`Current version: ${curVersion}`)
