@@ -7,7 +7,7 @@
 </p>
 
 > easy auto git tag
-
+![](https://ws1.sinaimg.cn/large/005AGh90ly1g51obue3hbg30ve0khnpd.gif)
 ## Install
 
 ```sh
