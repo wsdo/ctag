@@ -6,12 +6,19 @@ let curVersion = '1.0.0'
 
 const tagInit = () => {
   let msg = 'varsion init'
-  execSync(`git tag -a 'v${curVersion}' -m 'curVersion v${curVersion} : ${msg}'`)
+  execSync(
+    `git tag -a 'v${curVersion}' -m 'curVersion v${curVersion} : ${msg}'`
+  )
   execSync(`git push --tags`)
-  curVersion = execSync(`git describe --abbrev=0 --tags`, { encoding: 'utf8' }).trim()
+  curVersion = execSync(`git describe --abbrev=0 --tags`, {
+    encoding: 'utf8'
+  }).trim()
 }
 try {
-  curVersion = execSync(`git describe --abbrev=0 --tags`, { encoding: 'utf8' }).trim()
+  execSync(`git pull --tags`)
+  curVersion = execSync(`git describe --abbrev=0 --tags`, {
+    encoding: 'utf8'
+  }).trim()
 } catch (error) {
   tagInit()
 }
@@ -24,7 +31,10 @@ const release = async () => {
   bumps.forEach(b => {
     versions[b] = semver.inc(curVersion, b)
   })
-  const bumpChoices = bumps.map(b => ({ name: `${b} (${versions[b]})`, value: b }))
+  const bumpChoices = bumps.map(b => ({
+    name: `${b} (${versions[b]})`,
+    value: b
+  }))
 
   const { bump, customVersion } = await inquirer.prompt([
     {
