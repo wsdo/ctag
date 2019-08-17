@@ -16,7 +16,8 @@ const tagInit = () => {
 }
 try {
   execSync(`git fetch --tags`)
-  curVersion = execSync(`git describe --abbrev=0 --tags`, {
+  curVersion = execSync(`git tag | tail -1`, {
+    // curVersion = execSync(`git describe --abbrev=0 --tags`, {
     encoding: 'utf8'
   }).trim()
 } catch (error) {
