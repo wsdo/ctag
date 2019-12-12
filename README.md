@@ -17,7 +17,7 @@ npm install
 ```
 package json script add 
 
-"tag": "node node_modules/easy-tag",
+"tag": "ctag",
 
 ```
 
@@ -25,7 +25,11 @@ package json script add
 ```
 npm run tag
 ```
+OR：
 
+```
+npm -g i ctag
+```
 ## Run tests
 
 ```sh

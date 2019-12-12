@@ -41,7 +41,6 @@ module.exports = class Service {
 
     const release = async () => {
       console.log(`Current version: ${curVersion}`);
-
       const bumps = ["patch", "minor", "major", "prerelease"];
       const versions = {};
       bumps.forEach(b => {

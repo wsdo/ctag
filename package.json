@@ -1,14 +1,14 @@
 {
-  "name": "easy-tag",
-  "version": "1.0.4",
-  "description": "easy auto git tag",
+  "name": "ctag",
+  "version": "1.0.5",
+  "description": "easy auto create git tag",
   "main": "src/index.js",
   "scripts": {
     "tag": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "etag": "bin/tag.js"
+    "ctag": "bin/tag.js"
   },
   "author": "starkwang",
   "license": "ISC",
