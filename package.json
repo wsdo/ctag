@@ -1,13 +1,16 @@
 {
   "name": "easy-tag",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "easy auto git tag",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "tag": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "bin": {
+    "etag": "bin/tag.js"
+  },
+  "author": "starkwang",
   "license": "ISC",
   "dependencies": {
     "child_process": "^1.0.2",
