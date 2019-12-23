@@ -88,8 +88,8 @@ module.exports = class Service {
         try {
           console.log("version", version);
           console.log("pushing tag", version);
-          const GIT_COMMIT = execSync(`git rev-parse HEAD`);
-          const NEEDS_TAG = execSync(`git describe --contains ${curHEAD}`);
+          // const GIT_COMMIT = execSync(`git rev-parse HEAD`);
+          // const NEEDS_TAG = execSync(`git describe --contains ${curHEAD}`);
           execSync(
             `git tag -a 'v${version}' -m 'version v${version} : ${msg}'`
           );
