@@ -9,27 +9,15 @@
 > easy auto git tag
 ![](https://ws1.sinaimg.cn/large/005AGh90ly1g51obue3hbg30ve0khnpd.gif)
 ## Install
-
-```sh
-npm install 
-```
-## config
-```
-package json script add 
-
-"tag": "ctag",
-
-```
-
-## run 
-```
-npm run tag
-```
-OR：
-
 ```
 npm -g i ctag
 ```
+
+## uses
+```
+ctag
+```
+
 ## Run tests
 
 ```sh
